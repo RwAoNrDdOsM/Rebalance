@@ -89,3 +89,5 @@ for name, damage_profile in pairs(DamageProfileTemplates) do
 		no_damage_templates[no_damage_name] = no_damage_template
 	end
 end
+
+DamageProfileTemplates = table.merge(DamageProfileTemplates, no_damage_templates)
