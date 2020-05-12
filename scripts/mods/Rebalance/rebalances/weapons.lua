@@ -308,6 +308,13 @@ tmp.dodge_count = 6
 local tmp = Weapons.one_handed_flails_flaming_template
 tmp.actions.action_one.default_right.allowed_chain_actions[4].sub_action = "default_charge_2"
 
+local tmp = DamageProfileTemplates.flaming_flail_explosion.default_target
+tmp.dot_template_name = nil
+tmp.power_distribution.attack = 0.1
+
+local tmp = DamageProfileTemplates.flaming_flail_explosion_glance.default_target
+tmp.power_distribution.attack = 0.1
+
 local tmp = Weapons.one_handed_hammer_wizard_template_1
 tmp.dodge_count = 4
 tmp.max_fatigue_points = 6
