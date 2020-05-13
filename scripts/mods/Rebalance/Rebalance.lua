@@ -1,7 +1,7 @@
 local mod = get_mod("Rebalance")
 
 --Create table for NewDamageProfileTemplates
-NewDamageProfileTemplates = {}
+NewDamageProfileTemplates = NewDamageProfileTemplates or {}
 
 --Include other files
 --Weapons
