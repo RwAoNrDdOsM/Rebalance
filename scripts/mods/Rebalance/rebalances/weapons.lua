@@ -305,6 +305,15 @@ tmp.buffs.change_dodge_speed.external_optional_multiplier = 1.15
 ------------------------------Sienna-----------------------------------------------------------------	
 local tmp = Weapons.one_handed_daggers_template_1
 tmp.dodge_count = 6
+tmp.actions.action_one.push_stab.allowed_chain_actions[1].start_time = 0.75
+tmp.actions.action_one.push_stab.allowed_chain_actions[5] = {
+	sub_action = "default_right_heavy",
+	start_time = 0.55,
+	end_time = 0.75,
+	action = "action_one",
+	input = "action_one",
+	release_required = "action_one_hold",
+}
 
 local tmp = DamageProfileTemplates.flaming_flail_explosion.default_target
 tmp.dot_template_name = nil

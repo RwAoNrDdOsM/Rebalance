@@ -5,7 +5,11 @@ NewDamageProfileTemplates = NewDamageProfileTemplates or {}
 
 --Include other files
 --Weapons
-mod:dofile("scripts/mods/FixMeta/rebalance/weapons.lua")
+mod:dofile("scripts/mods/Rebalance/rebalances/weapons")
+
+--[[mod:hook_safe(WeaponUnitExtension, "start_action", function (self, action_name, sub_action_name, actions, t, power_level, action_init_data)
+    mod:echo(tostring(action_name) .. "." .. tostring(sub_action_name))
+end)]]
 
 --Add the new templates to the DamageProfile templates
 --Setup proper linkin in NetworkLookup
