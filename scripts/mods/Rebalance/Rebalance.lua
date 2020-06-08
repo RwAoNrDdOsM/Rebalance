@@ -3,9 +3,25 @@ local mod = get_mod("Rebalance")
 --Create table for NewDamageProfileTemplates
 NewDamageProfileTemplates = NewDamageProfileTemplates or {}
 
+--Functions (for ease)
+function mod:add_buff(buff_name, buff_data) 
+    local new_buff = {
+        buffs = {
+            merge({ name = buff_name }, buff_data),
+        },
+    }
+    BuffTemplates[buff_name] = new_buff
+    local index = #NetworkLookup.buff_templates + 1
+    NetworkLookup.buff_templates[index] = buff_name
+    NetworkLookup.buff_templates[buff_name] = index
+end
+
+
 --Include other files
 --Weapons
 mod:dofile("scripts/mods/Rebalance/rebalances/weapons")
+mod:dofile("scripts/mods/Rebalance/rebalances/traits")
+
 
 --[[mod:hook_safe(WeaponUnitExtension, "start_action", function (self, action_name, sub_action_name, actions, t, power_level, action_init_data)
     mod:echo(tostring(action_name) .. "." .. tostring(sub_action_name))
