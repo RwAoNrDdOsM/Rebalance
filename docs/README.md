@@ -1,5 +1,6 @@
 # Rebalance Mod
 Patch Notes for Weapon Rebalance Mod
+
 *Feedback about any of the weapon rebalance changes and any suggestions for weapon rebalance changes would be appreciated.*
 
 # Patch Notes
